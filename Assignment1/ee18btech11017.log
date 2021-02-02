@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.30)  1 FEB 2021 22:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.30)  1 FEB 2021 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,28 +667,37 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 137.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
- [1
+
+LaTeX Warning: Command \j invalid in math mode on input line 148.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+[1
 
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+ (./ee18btech11017.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 
-(./ee18btech11017.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
-Package rerunfilecheck Info: File `ee18btech11017.out' has not changed.
-(rerunfilecheck)             Checksum: 95C8420055BA199C102989F5675E3B7A;42.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
+
+Package rerunfilecheck Warning: File `ee18btech11017.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ee18btech11017.out':
+(rerunfilecheck)             Before: 95C8420055BA199C102989F5675E3B7A;42
+(rerunfilecheck)             After:  1210BCF5FEAE7A75A114051724EF25E7;85.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 9456 strings out of 494881
- 145372 string characters out of 6179627
- 251147 words of memory out of 5000000
- 12666 multiletter control sequences out of 15000+600000
+ 9457 strings out of 494881
+ 145385 string characters out of 6179627
+ 268147 words of memory out of 5000000
+ 12667 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
  44i,6n,42p,236b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ee18btech11017.dvi (1 page, 4624 bytes).
+Output written on ee18btech11017.dvi (1 page, 6632 bytes).
