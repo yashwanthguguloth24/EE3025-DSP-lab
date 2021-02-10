@@ -1,10 +1,11 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-
+%\usepackage{chngcntr}
 \usepackage{setspace}
-% \usepackage{gensymb}
+\usepackage{float}
+\usepackage{gensymb}
 \singlespacing
 % \usepackage[cmex10]{amsmath}
-
+\usepackage{caption}
 \usepackage{epstopdf}
 \usepackage[cmex10]{amsmath}
 %\usepackage{amsthm}
@@ -17,24 +18,26 @@
 %\usepackage{iithtlc}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
-
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{listings}
 \usepackage{bm}
 \usepackage{mathptmx}
-
+\usepackage{amsfonts}
 \usepackage{subfig}
-%\usepackage{xtab}
+\usepackage{xtab}
 \usepackage{longtable}
 
 %\usepackage{algorithm}
 %\usepackage{algpseudocode}
-
+%\usepackage{chngcntr}
 
 
 
 
 \usepackage{mathrsfs}
 \usepackage{txfonts}
-% \usepackage{stfloats}
+\usepackage{stfloats}
 \usepackage{bm}
 \usepackage{cite}
 % \usepackage{cases}
@@ -43,10 +46,10 @@
 \usepackage{longtable}
 % \usepackage{multirow}
 
-% \usepackage{enumitem}
+\usepackage{enumitem}
 \usepackage{mathtools}
 % \usepackage{steinmetz}
-%\usepackage{tikz}
+\usepackage{tikz}
 %\usepackage{circuitikz}
 \usepackage{verbatim}
 % \usepackage{tfrupee}
@@ -54,7 +57,7 @@
 \usepackage{graphicx}
 % \usepackage{tkz-euclide}
 
-% \usetikzlibrary{calc,math}
+\usetikzlibrary{calc,math}
 \usepackage{listings}
     \usepackage{color}                                            %%
     \usepackage{array}                                            %%
@@ -65,7 +68,7 @@
     \usepackage{ifthen}                                           %%
     \usepackage{lscape}     
 \usepackage{multicol}
-% \usepackage{chngcntr}
+\usepackage{chngcntr}
 \usepackage{xcolor}
 %\DeclareMathOperator*{\Res}{Res}
 
@@ -157,6 +160,9 @@ columns=fullflexible
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+
+
+
 Download all python codes from 
 \begin{lstlisting}
 https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1/codes
@@ -167,56 +173,119 @@ and latex-tikz codes from
 \begin{lstlisting}
 https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1
 \end{lstlisting}
+
+
 \section{Problem}
-Given $x(n)$ and $y(n)$. Compute $X(k)$ using the formula 
-\begin{equation}
-X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j 2\pi kn/N}, \quad k = 0,1,\dots, N-1
-\label{eq:equation1}
-\end{equation}
-Then compute $Y(k)$ using 
-\begin{equation}
-Y(k) = X(k)H(k)
-\label{eq:equation2}
-\end{equation}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+    \numberwithin{equation}{enumi}
+    
+    \item Let
+    \begin{align}
+        x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1} \\
+        y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2)	
+        \label{eq:equation1}
+    \end{align}
+    
+    \item Compute 
+    \begin{align}
+        X(k) \triangleq \sum_{n=0}^{N-1} x(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
+    \end{align}
+    and $H(k)$ using h(n).
+    
+    \item Compute 
+    \begin{align}
+    Y(k) = X(k)H(k)
+    \end{align}
+
+\end{enumerate}
 
 \section{Solution}
-First we can compute $X(k)$ from
-\begin{equation}
-x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
-\end{equation}
-using DFT equation \eqref{eq:equation1}. 
-Now we can also compute $H(k)$ from,
-\begin{equation}
-\label{eq:iir_filter_h}
-h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2), 
-\end{equation}
-using DFT equation \eqref{eq:equation1}. 
-Then we compute $Y(k)$ using \eqref{eq:equation2}.
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item
+We know that,the Impulse Response of the LTI system is the output of the system when Unit Impulse Signal is given as input to the system.\\
+\newline
+So, using Eq \eqref{eq:equation1} the Impulse Response of the System can be found as,
+\begin{align}
+    h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2)	
+\end{align}
+where $h(n)$ is an IIR Filter.
+\item DFT of a Input Signal $x(n)$ is 
+\begin{align}
+    X(k) \triangleq \sum_{n=0}^{N-1} x(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
+\end{align}
+\item DFT of a Impulse Response $h(n)$ is 
+\begin{align}
+    H(k) \triangleq \sum_{n=0}^{N-1} h(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
+\end{align}
 
+\item The magnitude and phase plots of $X(k)$ and $H(k)$
+\begin{figure}[!ht]
+	\includegraphics[width=1.15\columnwidth]{./figs/ee18btech11017_fig1.eps}
+\end{figure}
 
-The following code plots Fig.\ref{fig:fig1}  and Fig. \ref{fig:fig2}
+\item We can now compute $Y(k)$ using 	Eq \eqref{eq:equation2}
+
+\begin{align}
+    Y(k) = X(k)H(k)
+    \label{eq:equation2}
+\end{align}
+The magnitude and phase plots of $Y(k)$ are
+\begin{figure}[!ht]
+	\includegraphics[width=1.15\columnwidth]{./figs/ee18btech11017_fig2.eps}
+\end{figure}
+
+\item We can also find $y(n)$ from $Y(k)$ using IDFT formula Eq \eqref{eq:equation3}
+\begin{align}
+y\brak{n} \triangleq {\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{j 2\pi kn/N},\quad n = 0,1,\dots, N-1
+\label{eq:equation3}
+\end{align}
+
+\item The Plot of $y(n)$ using above Eq \eqref{eq:equation3} is
+\begin{figure}[!ht]
+	\includegraphics[width=1.15\columnwidth]{./figs/ee18btech11017_fig3.eps}
+\end{figure}
+
+\item The following code plots all the above figures.
 \begin{lstlisting}
-https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1/codes/6.2.py
+https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1/codes/ee18btech11017.py
 \end{lstlisting}
 
-\begin{figure}[!ht]
-  \includegraphics[width=\columnwidth]{./figs/ee18btech11017_fig1.eps}
-  \caption{•}
-  \label{fig:fig1}
-\end{figure}
+%\item Code for Computing DFT of $x(n)$ and $h(n)$
+%\solution\\
+%Assuming length of $h(n)$ is $250$ for better plotting of Frequency Components.\\
+%\newline
+%Code is in
+%\begin{lstlisting}
+%    codes/ee18btech11017.py
+%\end{lstlisting}
+%Magnitude and Phase Plots of $X(k)$ and $H(k)$
 
-We can also compute $y(n)$ using IDFT from Equation \ref{eq:equation3}.
+\end{enumerate}
 
-\begin{equation}
- y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n = 0,1,\dots, N-1
-\label{eq:equation3} 
-\end{equation}
 
-\begin{figure}[!ht]
-  \includegraphics[width=\columnwidth]{./figs/ee18btech11017_fig2.eps}
-  \caption{•}
-  \label{fig:fig2}
-\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
