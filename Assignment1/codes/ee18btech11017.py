@@ -65,13 +65,12 @@ def h_n(N):
 
 
 def main():
-    N = 20
+    N = 6
     x = x_n(N)
     X = DFT(x)
     h = h_n(N)
     H = DFT(h)
     Y = np.multiply(X,H)
-    y = IDFT(Y)
 
     plt.figure(1,figsize=(9,7.5))
     plt.subplot(2,2,1)
@@ -106,12 +105,6 @@ def main():
     plt.title(r'$\angle{Y(k)}$')
     plt.grid()
 
-    plt.figure(3)
-    plt.stem(np.real(y),use_line_collection=True)
-    plt.title("Filter output using DFT")
-    plt.xlabel(r'$n$')
-    plt.ylabel(r'$y(n)$')
-    plt.grid()
 
     plt.show()
 

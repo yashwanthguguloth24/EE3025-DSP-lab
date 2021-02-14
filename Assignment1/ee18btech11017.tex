@@ -8,7 +8,7 @@
 \usepackage{caption}
 \usepackage{epstopdf}
 \usepackage[cmex10]{amsmath}
-%\usepackage{amsthm}
+\usepackage{amsthm}
 %\interdisplaylinepenalty=2500
 %\savesymbol{iint}
 %\usepackage{txfonts}
@@ -181,7 +181,8 @@ https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1
     
     \item Let
     \begin{align}
-        x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1} \\
+        x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
+         \label{eq:equation0}\\
         y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2)	
         \label{eq:equation1}
     \end{align}
@@ -203,7 +204,7 @@ https://github.com/yashwanthguguloth24/EE3025-DSP-lab/tree/main/Assignment1
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 \item
-We know that,the Impulse Response of the LTI system is the output of the system when Unit Impulse Signal is given as input to the system.\\
+We know that,the Impulse Response of the LTI system is the output of the system when Unit Impulse Signal is given as input to the system.
 \newline
 So, using Eq \eqref{eq:equation1} the Impulse Response of the System can be found as,
 \begin{align}
@@ -214,10 +215,107 @@ where $h(n)$ is an IIR Filter.
 \begin{align}
     X(k) \triangleq \sum_{n=0}^{N-1} x(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
 \end{align}
+
+For N = 6, The above expression can be written in matrix form as below:
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
+\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
+\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
+\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
+\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
+\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+\end{bmatrix}
+\begin{bmatrix}
+x(1) \\ x(2) \\ x(3) \\ x(4) \\ x(5) \\x(6)
+\end{bmatrix}
+\end{equation}
+
+Where $\omega_{N} = e^{-j2\pi/N}$
+\begin{align}
+\implies \omega_{6} = e^{-j2\pi/6} = \frac{1-j\sqrt{3}}{2}
+\end{align}
+\newline
+Using $x(n)$ from Eq\eqref{eq:equation0}, we get
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
+\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
+\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
+\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
+\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
+\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+\end{bmatrix}
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4 \\ 2 \\ 1
+\end{bmatrix}
+\end{equation}
+
+Simplifying the above equation we get,
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+13+0j \\ -4-1.732j \\ 1+0j  \\ -1+0j \\ 1+0j \\ -4+1.732j
+\end{bmatrix}
+\end{equation}
+
+
 \item DFT of a Impulse Response $h(n)$ is 
 \begin{align}
     H(k) \triangleq \sum_{n=0}^{N-1} h(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
 \end{align}
+Similarly, converting the above expression in matrix form to find $H(k)$
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
+\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
+\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
+\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
+\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
+\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+\end{bmatrix}
+\begin{bmatrix}
+h(1) \\ h(2) \\ h(3) \\ h(4) \\ h(5) \\ h(6)
+\end{bmatrix}
+\end{equation}
+
+Simplying we get,
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+1.28125+0j \\ 0.51625-0.51418j \\ -0.07812+1.10956j  \\ 3.84375+0j \\ -0.07182-1.10956j \\ 0.51625+0.51418j
+\end{bmatrix}
+\end{equation}
+
+
 
 \item The magnitude and phase plots of $X(k)$ and $H(k)$
 \begin{figure}[!ht]
@@ -230,21 +328,44 @@ where $h(n)$ is an IIR Filter.
     Y(k) = X(k)H(k)
     \label{eq:equation2}
 \end{align}
+
+So, $Y(k)$ is obtained element wise multiplication of $X(k)$ and $H(k)$
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+X(0)\cdot H(0) \\ X(1)\cdot H(1) \\ X(2)\cdot H(2) \\ X(3)\cdot H(3) \\ X(4)\cdot H(4) \\ X(5)\cdot H(5)
+\end{bmatrix}
+\end{equation}
+
+Computing the above expression we get,
+\begin{equation}
+\renewcommand{\arraystretch}{1.25}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+16.6562+0j \\ -2.95312+1.16372j \\ -0.07812+1.10959j \\ -3.84375-9.27556j \\ -0.07812-1.10959j \\ -2.95312-1.16372j 
+\end{bmatrix}
+\end{equation}
+
+
+%[16.65625 +0.00000000e+00j -2.953125+1.16372164e+00j
+% -0.078125+1.10959505e+00j -3.84375 -9.27556643e-15j
+% -0.078125-1.10959505e+00j -2.953125-1.16372164e+00j]
+
 The magnitude and phase plots of $Y(k)$ are
 \begin{figure}[!ht]
 	\includegraphics[width=1.15\columnwidth]{./figs/ee18btech11017_fig2.eps}
 \end{figure}
 
-\item We can also find $y(n)$ from $Y(k)$ using IDFT formula Eq \eqref{eq:equation3}
-\begin{align}
-y\brak{n} \triangleq {\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{j 2\pi kn/N},\quad n = 0,1,\dots, N-1
-\label{eq:equation3}
-\end{align}
 
-\item The Plot of $y(n)$ using above Eq \eqref{eq:equation3} is
-\begin{figure}[!ht]
-	\includegraphics[width=1.15\columnwidth]{./figs/ee18btech11017_fig3.eps}
-\end{figure}
 
 \item The following code plots all the above figures.
 \begin{lstlisting}

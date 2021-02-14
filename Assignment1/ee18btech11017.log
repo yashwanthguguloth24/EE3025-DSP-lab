@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2021.2.8)  10 FEB 2021 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2021.2.8)  14 FEB 2021 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1527,70 +1527,53 @@ File: ot1txr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 168.
 
-Overfull \hbox (0.94426pt too wide) detected at line 192
+Overfull \hbox (0.94426pt too wide) detected at line 193
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
-
- []
-
-
-Overfull \hbox (0.94426pt too wide) detected at line 216
+Overfull \hbox (0.94426pt too wide) detected at line 217
 []
  []
 
 
-Overfull \hbox (2.62445pt too wide) detected at line 220
+Overfull \hbox (2.62445pt too wide) detected at line 283
 []
- []
-
-File: ./figs/ee18btech11017_fig1.eps Graphic file (type eps)
-<./figs/ee18btech11017_fig1.eps>
-Overfull \hbox (37.79846pt too wide) in paragraph at lines 224--225
-[][] 
- []
-
-File: ./figs/ee18btech11017_fig2.eps Graphic file (type eps)
-<./figs/ee18btech11017_fig2.eps>
-Overfull \hbox (37.79846pt too wide) in paragraph at lines 235--236
-[][] 
  []
 
 [1
 
 
 ]
-Overfull \hbox (15.30052pt too wide) detected at line 242
-[]
- []
-
-File: ./figs/ee18btech11017_fig3.eps Graphic file (type eps)
-<./figs/ee18btech11017_fig3.eps>
-Overfull \hbox (37.79846pt too wide) in paragraph at lines 246--247
+File: ./figs/ee18btech11017_fig1.eps Graphic file (type eps)
+ <./figs/ee18btech11017_fig1.eps>
+Overfull \hbox (37.79846pt too wide) in paragraph at lines 322--323
 [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
-[2
+File: ./figs/ee18btech11017_fig2.eps Graphic file (type eps)
+<./figs/ee18btech11017_fig2.eps>
+Overfull \hbox (37.79846pt too wide) in paragraph at lines 365--366
+[][] 
+ []
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
  (./ee18btech11017.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `ee18btech11017.out' has not changed.
 (rerunfilecheck)             Checksum: 1210BCF5FEAE7A75A114051724EF25E7;85.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
  ) 
 Here is how much of TeX's memory you used:
- 21731 strings out of 494881
- 390043 string characters out of 6179628
- 494207 words of memory out of 5000000
- 24620 multiletter control sequences out of 15000+600000
+ 21728 strings out of 494881
+ 389947 string characters out of 6179628
+ 497207 words of memory out of 5000000
+ 24618 multiletter control sequences out of 15000+600000
  37778 words of font info for 95 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 55i,11n,54p,416b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,416b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ee18btech11017.dvi (2 pages, 18820 bytes).
+Output written on ee18btech11017.dvi (2 pages, 28004 bytes).
