@@ -218,54 +218,65 @@ where $h(n)$ is an IIR Filter.
 
 For N = 6, The above expression can be written in matrix form as below:
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
 \end{bmatrix}
 =
 \begin{bmatrix}
-\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
-\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
-\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
-\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
-\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
-\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6}\\
+W^{0}_{6} & W^{1}_{6} & W^{2}_{6} & W^{3}_{6} & W^{4}_{6} & W^{5}_{6}\\
+W^{0}_{6} & W^{2}_{6} & W^{4}_{6} & W^{6}_{6} & W^{8}_{6} & W^{10}_{6}\\
+W^{0}_{6} & W^{3}_{6} & W^{6}_{6} & W^{9}_{6} & W^{12}_{6} & W^{15}_{6}\\
+W^{0}_{6} & W^{4}_{6} & W^{8}_{6} & W^{12}_{6} & W^{16}_{6} & W^{20}_{6}\\
+W^{0}_{6} & W^{5}_{6} & W^{10}_{6} & W^{15}_{6} & W^{20}_{6} & W^{25}_{6} 
 \end{bmatrix}
 \begin{bmatrix}
 x(1) \\ x(2) \\ x(3) \\ x(4) \\ x(5) \\x(6)
 \end{bmatrix}
 \end{equation}
 
-Where $\omega_{N} = e^{-j2\pi/N}$
+Where $W_{N} = e^{-j2\pi/N}$
 \begin{align}
-\implies \omega_{6} = e^{-j2\pi/6} = \frac{1-j\sqrt{3}}{2}
+\implies W_{6} = e^{-j2\pi/6} = \frac{1-j\sqrt{3}}{2}
 \end{align}
 \newline
 Using $x(n)$ from Eq\eqref{eq:equation0}, we get
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
 \end{bmatrix}
 =
 \begin{bmatrix}
-\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
-\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
-\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
-\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
-\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
-\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6}\\
+W^{0}_{6} & W^{1}_{6} & W^{2}_{6} & W^{3}_{6} & W^{4}_{6} & W^{5}_{6}\\
+W^{0}_{6} & W^{2}_{6} & W^{4}_{6} & W^{6}_{6} & W^{8}_{6} & W^{10}_{6}\\
+W^{0}_{6} & W^{3}_{6} & W^{6}_{6} & W^{9}_{6} & W^{12}_{6} & W^{15}_{6}\\
+W^{0}_{6} & W^{4}_{6} & W^{8}_{6} & W^{12}_{6} & W^{16}_{6} & W^{20}_{6}\\
+W^{0}_{6} & W^{5}_{6} & W^{10}_{6} & W^{15}_{6} & W^{20}_{6} & W^{25}_{6} 
 \end{bmatrix}
 \begin{bmatrix}
 1 \\ 2 \\ 3 \\ 4 \\ 2 \\ 1
 \end{bmatrix}
 \end{equation}
 
-Simplifying the above equation we get,
+
+On simplifying we get,
+\begin{align}
+    \renewcommand{\arraystretch}{1.35}
+    \begin{bmatrix} X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) \end{bmatrix}
+=
+\begin{bmatrix}
+1 +2+3+4+2+1 \\ 1+ (2)e^{-j\pi /3} + ... + (1)e^{-j5\pi /3}\\ 1 + (2)e^{-2j\pi /3} + ... +(1)(e^{-2j5\pi /3}\\ 1 + (2)e^{-3j\pi /3} + ... + (1)e^{-3j5\pi /3}\\ 1 + (2)e^{-4j\pi /3} + ... + (1)e^{-4j5\pi /3}\\ 1 + (2)e^{-5j\pi /3} + ... + (1)e^{-5j5\pi /3}
+\end{bmatrix}
+\end{align}
+
+Finally,
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.35}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) 
@@ -283,28 +294,42 @@ X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5)
 \end{align}
 Similarly, converting the above expression in matrix form to find $H(k)$
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) 
 \end{bmatrix}
 =
 \begin{bmatrix}
-\omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6} & \omega^{0}_{6}\\
-\omega^{0}_{6} & \omega^{1}_{6} & \omega^{2}_{6} & \omega^{3}_{6} & \omega^{4}_{6} & \omega^{5}_{6}\\
-\omega^{0}_{6} & \omega^{2}_{6} & \omega^{4}_{6} & \omega^{6}_{6} & \omega^{8}_{6} & \omega^{10}_{6}\\
-\omega^{0}_{6} & \omega^{3}_{6} & \omega^{6}_{6} & \omega^{9}_{6} & \omega^{12}_{6} & \omega^{15}_{6}\\
-\omega^{0}_{6} & \omega^{4}_{6} & \omega^{8}_{6} & \omega^{12}_{6} & \omega^{16}_{6} & \omega^{20}_{6}\\
-\omega^{0}_{6} & \omega^{5}_{6} & \omega^{10}_{6} & \omega^{15}_{6} & \omega^{20}_{6} & \omega^{25}_{6} 
+W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6} & W^{0}_{6}\\
+W^{0}_{6} & W^{1}_{6} & W^{2}_{6} & W^{3}_{6} & W^{4}_{6} & W^{5}_{6}\\
+W^{0}_{6} & W^{2}_{6} & W^{4}_{6} & W^{6}_{6} & W^{8}_{6} & W^{10}_{6}\\
+W^{0}_{6} & W^{3}_{6} & W^{6}_{6} & W^{9}_{6} & W^{12}_{6} & W^{15}_{6}\\
+W^{0}_{6} & W^{4}_{6} & W^{8}_{6} & W^{12}_{6} & W^{16}_{6} & W^{20}_{6}\\
+W^{0}_{6} & W^{5}_{6} & W^{10}_{6} & W^{15}_{6} & W^{20}_{6} & W^{25}_{6}  
 \end{bmatrix}
 \begin{bmatrix}
 h(1) \\ h(2) \\ h(3) \\ h(4) \\ h(5) \\ h(6)
 \end{bmatrix}
 \end{equation}
 
-Simplying we get,
+
+Further Simplification we get,
+\begin{align}
+    \renewcommand{\arraystretch}{1.35}
+    \begin{bmatrix} H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) \end{bmatrix}
+=
+\begin{bmatrix}
+h(0) + h(1) + h(2) + h(3) + h(4) + h(5) \\h(0) + h(1)e^{-j\pi /3} + ... + h(5)e^{-j5\pi /3}\\h(0) + h(1)e^{-2j\pi /3} + ... + h(5)e^{-2j5\pi /3}\\h(0) + h(1)e^{-3j\pi /3} + ... + h(5)e^{-3j5\pi /3}\\
+h(0) + h(1)e^{-4j\pi /3} + ... + h(5)e^{-4j5\pi /3}\\h(0) + h(1)e^{-5j\pi /3} + ... + h(5)e^{-5j5\pi /3}
+\end{bmatrix}
+\end{align}
+
+
+
+Finally we get,
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) 
@@ -331,7 +356,7 @@ H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5)
 
 So, $Y(k)$ is obtained element wise multiplication of $X(k)$ and $H(k)$
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
@@ -344,7 +369,7 @@ X(0)\cdot H(0) \\ X(1)\cdot H(1) \\ X(2)\cdot H(2) \\ X(3)\cdot H(3) \\ X(4)\cdo
 
 Computing the above expression we get,
 \begin{equation}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.45}
 \setlength\arraycolsep{0.01pt}
 \begin{bmatrix} 
 Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
