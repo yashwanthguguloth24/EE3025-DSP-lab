@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2021.2.8)  15 FEB 2021 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2021.2.8)  7 MAR 2021 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1567,25 +1567,105 @@ Overfull \hbox (37.79846pt too wide) in paragraph at lines 390--391
  []
 
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
- [3
+Overfull \hbox (28.20616pt too wide) detected at line 435
+[]
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 441.
+
+Overfull \hbox (29.19243pt too wide) detected at line 471
+[] [] \OT1/ztmcm/m/n/12 = [] []
+ []
+
+
+Overfull \hbox (2.67278pt too wide) detected at line 562
+[] [] \OT1/ztmcm/m/n/12 = [] []
+ []
+
+[3]
+Underfull \hbox (badness 1888) in paragraph at lines 565--566
+[]\OT1/ptm/m/n/12 Considering $\OML/ztmcm/m/it/12 I[]$ \OT1/ptm/m/n/12 to be 3x
+3 iden-tity ma-trix
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 565--566
+\OML/ztmcm/m/it/12 D[] \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 diag\OT1/ztmcm/m/
+n/12 (1\OML/ztmcm/m/it/12 ; W[]; W[]; ::::; W[]\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n
+/12 . There-fore
+ []
+
+
+Overfull \hbox (34.69193pt too wide) detected at line 735
+[] [] \OT1/ztmcm/m/n/12 = [] + [] []
+ []
+
+
+Overfull \hbox (34.69193pt too wide) detected at line 764
+[] [] \OT1/ztmcm/m/n/12 = [] \OMS/ztmcm/m/n/12 ^^@ [] []
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
+[]\OT1/ptm/m/n/12 So, $\OML/ztmcm/m/it/12 X[] \OMS/ztmcm/m/n/12 2 []f\OML/ztmcm
+/m/it/12 x\OT1/ztmcm/m/n/12 (1)\OML/ztmcm/m/it/12 ; x\OT1/ztmcm/m/n/12 (5)\OMS/
+ztmcm/m/n/12 g$ \OT1/ptm/m/n/12 and
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 974--975
+\OML/ztmcm/m/it/12 X[] \OMS/ztmcm/m/n/12 2 []f\OML/ztmcm/m/it/12 x\OT1/ztmcm/m/
+n/12 (3)\OML/ztmcm/m/it/12 ; x\OT1/ztmcm/m/n/12 (7)\OMS/ztmcm/m/n/12 g$ \OT1/pt
+m/m/n/12 would com-bine to
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 974--975
+\OT1/ptm/m/n/12 give $\OML/ztmcm/m/it/12 X[]$ \OT1/ptm/m/n/12 .And $\OML/ztmcm/
+m/it/12 X[] \OMS/ztmcm/m/n/12 2 []f\OML/ztmcm/m/it/12 x\OT1/ztmcm/m/n/12 (0)\OM
+L/ztmcm/m/it/12 ; x\OT1/ztmcm/m/n/12 (4)\OMS/ztmcm/m/n/12 g$ \OT1/ptm/m/n/12 an
+d
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 986--988
+\OT1/ptm/m/n/12 Solving this re-cur-rence re-la-tion gives
+ []
+
+File: ./figs/ee18btech11017_fig3.eps Graphic file (type eps)
+<./figs/ee18btech11017_fig3.eps>
+Overfull \hbox (37.79846pt too wide) in paragraph at lines 996--997
+[][] 
+ []
+
+File: ./figs/ee18btech11017_fig4.eps Graphic file (type eps)
+<./figs/ee18btech11017_fig4.eps>
+Overfull \hbox (37.79846pt too wide) in paragraph at lines 1010--1011
+[][] 
+ []
+
+[5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1047.
+ [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1047.
  (./ee18btech11017.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 437.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1047.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1047.
+
 Package rerunfilecheck Info: File `ee18btech11017.out' has not changed.
-(rerunfilecheck)             Checksum: 1210BCF5FEAE7A75A114051724EF25E7;85.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
+(rerunfilecheck)             Checksum: EC98288704731CE146B7B68BB9E22CF1;134.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1047.
  ) 
 Here is how much of TeX's memory you used:
- 21728 strings out of 494881
- 389947 string characters out of 6179628
- 497207 words of memory out of 5000000
- 24618 multiletter control sequences out of 15000+600000
- 37778 words of font info for 95 fonts, out of 8000000 for 9000
+ 21793 strings out of 494881
+ 390937 string characters out of 6179628
+ 498229 words of memory out of 5000000
+ 24680 multiletter control sequences out of 15000+600000
+ 52811 words of font info for 140 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 55i,14n,54p,416b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,54p,416b,1273s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ee18btech11017.dvi (3 pages, 31948 bytes).
+Output written on ee18btech11017.dvi (6 pages, 64204 bytes).
